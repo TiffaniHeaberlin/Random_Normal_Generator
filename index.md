@@ -1,0 +1,55 @@
+---
+title       : Random Number Generator
+subtitle    : 
+author      : 
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Reasons for using application
+
+1. Many areas need random numbers for sampling done for medical chart audits.
+2. It can also be used when trying to test how close random numbers followo their distribution
+3. It also shows that random numbers change as you change a seed.
+
+--- .class #id 
+
+## Example Generating Five Random Normal Numbers from a Standard Normal Distribution
+
+
+```r
+setwd("C:/Users/slussetc/Documents/GitHub/Developing_Data_Products")
+set.seed(200)
+rnorm(5,0,1)
+```
+
+```
+## [1] 0.08475635 0.22646034 0.43255650 0.55806524 0.05975527
+```
+
+--- .class #id
+## Other things to consider
+1. With some slight changes to the code, this could be used to generate random
+numbers within a give range.
+2.  This can also be used for random number generation from other distributions
+3.  Similar functions can be used to get the quantile of distributions
+
+--- .class #id
+##  Example of Quantiles
+Here is a call that returns the 0.975 quantile of a random normal
+
+```r
+setwd("C:/Users/slussetc/Documents/GitHub/Developing_Data_Products")
+set.seed(200)
+qnorm(0.975,0,1)
+```
+
+```
+## [1] 1.959964
+```
+
